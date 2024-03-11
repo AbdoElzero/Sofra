@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.container .box {
+  background-color: #EEE;
+  padding: 20px 0 0 0;
+  width: 70%;
+  border-radius: 7px;
+  text-align: right;
+  background-color: #4044c9e8;
+  box-shadow: 0px 0px 10px 0px #2432611a;
+}
+@media (max-width: 991px) {
+  .container .box {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .container .box {
+    width: 100%;
+  }
+}
+.container h1 {
+  margin: 0px 0px 30px 0;
+  font-size: 34px;
+  font-weight: bold;
+  padding-right: 20px;
+  color: white;
+}
+.day-dropdown-container {
+  margin-bottom: 20px;
+  padding-right: 20px;
+}
+.day-dropdown-container label {
+  color: #fff;
+  font-size: 20px;
+}
+.day-dropdown-container #day-dropdown {
+  width: 120px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 390px) {
+  .day-dropdown-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .day-dropdown-container label {
+    margin-bottom: 10px;
+  }
+  .day-dropdown-container #day-dropdown {
+    margin-right: 0;
+    font-size: 18px;
+  }
+}
+.dishes-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 20px;
+}
+.dishes-list li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: rgb(242, 242, 242);
+  padding: 10px 10px;
+  color: #000;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dishes-list li i {
+  transition: 0.3s;
+}
+.dishes-list li i:hover {
+  color: red;
+}
+.container #dishes-container {
+  background-color: #fff;
+  border-radius: 40px 40px 0 0 ;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.container #dishes-container h2 {
+  color: black;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.add-dish-form input[type="text"],
+.add-dish-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+.group { 
+  position:relative; 
+  margin-bottom:10px;
+  margin-top: 30px;
+}
+input	{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  max-width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+@media (max-width: 390px) {
+  input {
+    max-width: 140px;
+  }
+}
+input:focus { 
+  outline:none; 
+}
+
+.group label {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+button {
+  padding: 10px 5px;
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  background: transparent;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
